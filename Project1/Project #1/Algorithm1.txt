@@ -1,0 +1,53 @@
+/*
+  	  Devin Fowler
+      http://people.emich.edu/dfowle13/courses/Cosc311/Project#1
+      COSC 311
+      Project #1
+      FALL 2016. 
+ */
+public class Algorithm1 {
+
+	public static void main(String[] args) {
+		doWork();
+	}
+
+	public static void doWork() {
+
+		long startTime = 0;
+		long endTime;
+		int numberOfValues = 100;
+		int numberToChoose = 10;
+		int[] numbers = new int[numberOfValues + 1];
+		int timesThrough = 0;
+
+		for (int i = 0; i <= numberOfValues; i++) {
+			numbers[i] = i;
+		}
+
+		int n = numbers.length;
+		for (int i = 0; i < n; i++) {
+			startTime = System.nanoTime();
+
+			int r = i + (int) (Math.random() * (n - i));
+			int tmp = numbers[i];
+			numbers[i] = numbers[r];
+			numbers[r] = tmp;
+
+		}
+
+		for (int i = 0; i < numberToChoose; i++) {
+
+			timesThrough++;
+			System.out.println("Number " + timesThrough + ": " + numbers[timesThrough]);
+			endTime = System.nanoTime();
+			long totalTime = (endTime - startTime) / 1000;
+
+			System.out.println("Ordered pair is: " + "(" + numberOfValues + "," + (i + 1) + ")");
+			System.out.println("Run time is: " + totalTime);
+			System.out.println();
+
+		}
+
+	}
+
+}

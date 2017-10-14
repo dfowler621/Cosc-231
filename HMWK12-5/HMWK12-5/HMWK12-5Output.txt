@@ -1,0 +1,20 @@
+After Sort: 
+bahorski
+chaudhuri
+cowan
+evett
+francis
+haynes
+ikeji
+maniccam
+mansour
+moore
+narayanan
+panja
+poh
+sverdlik
+tehranipour
+zeiger
+zhang
+
+Merge sort was invoked 33 times

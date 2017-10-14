@@ -1,0 +1,83 @@
+/*
+  	  Devin Fowler
+      http://people.emich.edu/dfowle13/courses/Cosc311/HMWK11-21.txt
+      COSC 311
+      HW 11/21
+      FALL 2016 
+ */
+
+
+import java.util.*;
+
+public class Homework8 {
+
+	public static ArrayList<Integer> queue = new ArrayList<Integer>();
+	public static int timeStamp = -1;
+
+	public static int[] tStampArray = new int[10];
+
+	public static void main(String[] args) {
+
+		insert(1);
+		insert(7);
+		insert(3);
+		insert(4);
+		insert(5);
+		insert(6);
+		insert(1);
+		insert(2);
+		insert(3);
+		System.out.println();
+		System.out.println("Queue before delete: " + queue);
+
+		delete(1);
+		delete(1);
+		delete(2);
+		delete(3);
+		delete(3);
+		delete(4);
+		delete(5);
+		delete(6);
+		delete(7);
+		System.out.println();
+		System.out.println("Queue after delete: " + queue);
+		System.out.println(Arrays.toString(tStampArray));
+
+		getMax();
+
+	}
+
+	public static void insert(int num) {
+		queue.add(num);
+		timeStamp++;
+		tStampArray[timeStamp] = num;
+
+		System.out.println("Added " + num + " with timestamp " + timeStamp);
+	}
+
+	public static void delete(int a) {
+
+		int location = queue.indexOf(a);
+		queue.remove(location);
+
+		timeStamp++;
+
+		System.out.println();
+		System.out.println("Removed " + a + " from location " + (location));
+
+	}
+
+	public static void getMax() {
+
+		int max = Integer.MIN_VALUE;
+		for (int i = 0; i < tStampArray.length; i++) {
+			if (tStampArray[i] > max) {
+				max = tStampArray[i];
+			}
+		}
+		System.out.println("Max Value: " + max);
+
+		System.out.println("Max Age: " + timeStamp);
+
+	}
+}

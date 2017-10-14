@@ -1,0 +1,34 @@
+Added 1 with timestamp 0
+Added 7 with timestamp 1
+Added 3 with timestamp 2
+Added 4 with timestamp 3
+Added 5 with timestamp 4
+Added 6 with timestamp 5
+Added 1 with timestamp 6
+Added 2 with timestamp 7
+Added 3 with timestamp 8
+
+Queue before delete: [1, 7, 3, 4, 5, 6, 1, 2, 3]
+
+Removed 1 from location 0
+
+Removed 1 from location 5
+
+Removed 2 from location 5
+
+Removed 3 from location 1
+
+Removed 3 from location 4
+
+Removed 4 from location 1
+
+Removed 5 from location 1
+
+Removed 6 from location 1
+
+Removed 7 from location 0
+
+Queue after delete: []
+[1, 7, 3, 4, 5, 6, 1, 2, 3, 0]
+Max Value: 7
+Max Age: 17

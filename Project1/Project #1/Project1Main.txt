@@ -1,0 +1,39 @@
+/*
+  	  Devin Fowler
+      http://people.emich.edu/dfowle13/courses/Cosc311/Project#1
+      COSC 311
+      Project #1
+      FALL 2016. 
+ */
+public class Project1Main {
+
+	public static void main(String[] args) {
+		System.out.println("Algorithm #1");
+		System.out.println("-------------------------------");
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Date run: 10/07/2016");
+			System.out.println("Run #" + (i + 1));
+			System.out.println("-------------------------------");
+			Algorithm1.doWork();
+		}
+		System.out.println("Algorithm #2");
+		System.out.println("------------------------------");
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Date run: 10/07/2016");
+			System.out.println("Run #" + (i + 1));
+			System.out.println("-------------------------------");
+			Algorithm2.doWork();
+		}
+		System.out.println("Algorithm #3");
+		System.out.println("------------------------------");
+		for (int i = 0; i < 5; i++) {
+			System.out.println("Date run: 10/07/2016");
+			System.out.println("Run #" + (i + 1));
+		System.out.println("-------------------------------");
+			Algorithm3.doWork();
+
+		}
+
+	}
+
+}

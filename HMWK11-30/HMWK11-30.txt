@@ -1,0 +1,52 @@
+/*
+  	  Devin Fowler
+      http://people.emich.edu/dfowle13/courses/Cosc311/HMWK11-30.txt
+      COSC 311
+      HW 11/30
+      FALL 2016 
+ */
+import java.util.Hashtable;
+
+public class Homework9 {
+	public static int size = 8;
+	public static Hashtable<String, Integer> table = new Hashtable<String, Integer>(size);
+
+	public static void main(String[] args) {
+		insert("ikeji", 1);
+		insert("bahorski", 2);
+		insert("chaudhuri", 3);
+		insert("evett", 4);
+		insert("haynes", 5);
+		insert("maniccam", 6);
+		insert("moore", 7);
+		insert("narayanan", 8);
+		insert("panja", 9);
+		insert("poh", 10);
+		insert("sverdlik", 11);
+		insert("tehranipour", 12);
+		insert("zeiger", 13);
+		insert("zhang", 14);
+		insert("cowan", 15);
+		insert("francis", 16);
+		insert("mansour", 17);
+		System.out.println("Final size of the table is: " + size);
+
+	}
+
+	public static void insert(String name, Integer x) {
+
+		float percentage;
+		percentage = x;
+		percentage = percentage / size;
+
+		table.put(name, x);
+
+		if (percentage >= 0.75) {
+			System.out.println("Load exceeds 75%, outputting table: " + table);
+			size = size * 2;
+
+		}
+
+	}
+
+}

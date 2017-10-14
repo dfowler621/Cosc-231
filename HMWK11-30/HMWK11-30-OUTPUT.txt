@@ -1,0 +1,3 @@
+Load exceeds 75%, outputting table: {chaudhuri=3, bahorski=2, haynes=5, evett=4, maniccam=6, ikeji=1}
+Load exceeds 75%, outputting table: {bahorski=2, poh=10, panja=9, moore=7, evett=4, chaudhuri=3, ikeji=1, maniccam=6, haynes=5, tehranipour=12, sverdlik=11, narayanan=8}
+Final size of the table is: 32
