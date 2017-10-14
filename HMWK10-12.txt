@@ -1,0 +1,57 @@
+/*
+  	  Devin Fowler
+      http://people.emich.edu/dfowle13/courses/Cosc311/HMWK10-12.txt
+      COSC 311
+      HW 10/12
+      FALL 2016 
+ */
+
+import java.util.Stack;
+
+public class Homework5 {
+
+	public static void main(String[] args) {
+
+		String str = "(())";
+		System.out.println(maxDepth(str));
+
+	}
+
+	public static int maxDepth(String str) {
+
+		Stack<Character> theStack = new Stack<Character>();
+
+		int currMax = 0;
+		int max = 0;
+
+		for (char val : str.toCharArray()) {
+
+			if (val == '(') {
+
+				currMax++;
+
+				if (currMax > max)
+
+					max = currMax;
+
+				theStack.push(val);
+
+			}
+
+			else if (val == ')') {
+
+				currMax--;
+
+			}
+		}
+
+		if (theStack.isEmpty()) {
+			max = -1;
+
+		}
+
+		return max;
+
+	}
+
+}

@@ -1,0 +1,67 @@
+
+/*
+      Devin Fowler
+      http://people.emich.edu/dfowle13/courses/Cosc311/HMWK10-10.txt
+      COSC 311
+      HW 10/10
+      FALL 2016 
+ */
+import java.util.Random;
+
+public class Homework4 {
+
+	public static int stackSize = 10;
+	public static int stackArray[] = new int[stackSize];
+	public static int maxArray[] = new int[stackSize];
+	public static int topOfStack = 1;
+	public static int topOfMaxStack = 1;
+
+	public static void push(int num) {
+
+		if (num < maxArray[(topOfMaxStack - 1)]) {
+
+			stackArray[topOfStack] = num;
+
+			topOfStack++;
+		}
+
+		if (num > maxArray[(topOfMaxStack - 1)]) {
+			maxArray[topOfMaxStack] = num;
+
+			topOfMaxStack++;
+		}
+
+	}
+
+	public static void pop() {
+
+		System.out.println();
+		System.out.println("Popped: " + stackArray[(topOfStack - 1)]);
+
+		stackArray[topOfStack] = 0;
+
+	}
+
+	public static void max() {
+		System.out.println("The maximum value in the stack is: " + maxArray[(topOfMaxStack - 1)]);
+
+	}
+	
+	
+
+	public static void main(String[] args) {
+
+		Random rand = new Random();
+
+		for (int i = 0; i < stackSize; i++) {
+			int newNumber = rand.nextInt(1000);
+
+			push(newNumber);
+		}
+		
+
+		max();
+
+	}
+
+}

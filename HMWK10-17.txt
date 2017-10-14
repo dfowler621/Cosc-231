@@ -1,0 +1,44 @@
+/*
+  	  Devin Fowler
+      http://people.emich.edu/dfowle13/courses/Cosc311/HMWK10-17.txt
+      COSC 311
+      HW 10/17
+      FALL 2016 
+ */
+
+
+public class Homework6 {
+
+	public static void main(String[] args) {
+
+		int fib[] = new int[10];
+		fib[0] = 1;
+		fib[1] = 1;
+
+		int k = 5;
+		
+
+		if (fib[k] == 0) {
+
+			int result = fibonacci(k);
+			System.out.println("Calculated: " + result);
+			fib[k] = result;
+
+		}
+
+		else if (fib[k] != 0) {
+			System.out.println("Got from table: " + fib[k]);
+		}
+		
+	}
+
+	public static int fibonacci(int k) {
+
+		if (k <= 1)
+			return k;
+		else
+			return fibonacci(k - 1) + fibonacci(k - 2);
+
+	}
+
+}

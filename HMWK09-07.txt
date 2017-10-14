@@ -1,0 +1,43 @@
+/*
+  	  Devin Fowler
+      http://people.emich.edu/dfowle13/courses/Cosc311/HMWK09-07.txt
+      COSC 311
+      HW 09/07
+      FALL 2016. 
+ */
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Homework1 {
+
+	
+	public static void main(String[] args) throws IOException {
+
+		PrintWriter pr = new PrintWriter("randomOut.txt");
+
+		Scanner scanner = new Scanner(new File("randomIn.txt"));
+
+		ArrayList<Integer> numbers = new ArrayList<Integer>();
+		while (scanner.hasNextInt()) {
+
+			numbers.add(scanner.nextInt());
+		}
+
+		scanner.close();
+
+		System.out.println(Arrays.toString(numbers.toArray()));
+
+		Collections.sort(numbers);
+
+		for (int counter : numbers) {
+			System.out.print(counter + " ");
+			pr.print(counter + " ");
+
+		}
+
+		pr.close();
+	}
+
+}
